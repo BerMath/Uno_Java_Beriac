@@ -24,7 +24,6 @@ public class Plus4Card extends Card implements PoweredCard {
 
     @Override
     public boolean canBePlayedOn(Card card) {
-        // Can be played on any card
         return true;
     }
 

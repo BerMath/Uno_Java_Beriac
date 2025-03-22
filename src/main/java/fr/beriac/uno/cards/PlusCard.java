@@ -1,9 +1,5 @@
 // PlusCard.java
-package fr.ynov.java.uno;
-
-import fr.beriac.uno.cards.Card;
-import fr.beriac.uno.cards.ColoredCard;
-import fr.beriac.uno.cards.PoweredCard;
+package fr.beriac.uno.cards;
 
 import java.awt.*;
 

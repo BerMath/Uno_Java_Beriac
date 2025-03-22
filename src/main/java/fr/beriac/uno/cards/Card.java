@@ -6,4 +6,5 @@ public abstract class Card {
 
 
     public abstract boolean canBePlayedOn(Card card);
+
 }
