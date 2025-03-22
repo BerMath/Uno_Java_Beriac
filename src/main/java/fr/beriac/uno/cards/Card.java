@@ -5,5 +5,5 @@ public abstract class Card {
     public abstract String toString();
 
 
-    public abstract boolean canBePlacedOn(Card card);
+    public abstract boolean canBePlayedOn(Card card);
 }
