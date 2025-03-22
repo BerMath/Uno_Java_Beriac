@@ -1,6 +1,9 @@
-package fr.beriac.uno.cards;
+// PlusCard.java
+package fr.ynov.java.uno;
 
-import fr.ynov.java.uno.Game;
+import fr.beriac.uno.cards.Card;
+import fr.beriac.uno.cards.ColoredCard;
+import fr.beriac.uno.cards.PoweredCard;
 
 import java.awt.*;
 
@@ -16,7 +19,8 @@ public class PlusCard extends ColoredCard implements PoweredCard {
     }
 
     @Override
-    public void performAction(Game game) {
+    public void performAction(fr.ynov.java.uno.Game game) {
+        // Next player draws 2 cards
         game.makeNextPlayerDraw(power);
     }
 
@@ -32,4 +36,6 @@ public class PlusCard extends ColoredCard implements PoweredCard {
     public String toString() {
         return getColorName() + " +2";
     }
+
+
 }
