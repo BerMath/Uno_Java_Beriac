@@ -1,6 +1,7 @@
 package fr.beriac.uno.cards;
-
+import fr.beriac.uno.Game;
 import java.awt.*;
+import java.util.Scanner;
 
 public class Plus4Card extends Card implements PoweredCard {
     private java.awt.Color chosenColor;
@@ -14,12 +15,21 @@ public class Plus4Card extends Card implements PoweredCard {
     }
 
     @Override
-    public void performAction(fr.ynov.java.uno.Game game) {
-        // Ask current player to choose a color
-        this.chosenColor = game.getCurrentPlayer().chooseColor();
-
-        // Next player draws 4 cards
+    public void performAction(Game game) {
+        // Dans l'interface graphique, la couleur est déjà définie via setChosenColor
+        // Ne pas appeler showColorChooser() ici pour éviter le blocage
+        // Faire piocher 4 cartes au joueur suivant
+        game.nextPlayer();
         game.makeNextPlayerDraw(4);
+        game.nextPlayer();
+    }
+
+    private String colorToString(Color color) {
+        if (color.equals(Color.RED)) return "ROUGE";
+        if (color.equals(Color.GREEN)) return "VERT";
+        if (color.equals(Color.BLUE)) return "BLEU";
+        if (color.equals(Color.YELLOW)) return "JAUNE";
+        return "INCONNUE";
     }
 
     @Override
@@ -32,3 +42,4 @@ public class Plus4Card extends Card implements PoweredCard {
         return "WILD +4";
     }
 }
+

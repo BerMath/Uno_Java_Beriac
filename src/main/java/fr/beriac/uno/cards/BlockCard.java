@@ -1,7 +1,5 @@
 package fr.beriac.uno.cards;
-
-
-import fr.ynov.java.uno.Game;
+import fr.beriac.uno.Game;
 
 import java.awt.*;
 
@@ -11,7 +9,7 @@ public class BlockCard extends ColoredCard implements PoweredCard {
     }
 
     @Override
-    public void perforAction(Game game) {
+    public void performAction(Game game) {
         game.skipNextPlayer();
     }
 
@@ -20,7 +18,7 @@ public class BlockCard extends ColoredCard implements PoweredCard {
         if (card instanceof BlockCard) {
             return true;
         }
-        return super.canBePlacedOn(card);
+        return super.canBePlayedOn(card);
     }
 
     @Override

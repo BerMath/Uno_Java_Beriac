@@ -1,23 +1,23 @@
 package fr.beriac.uno.cards;
-
+import fr.beriac.uno.Game;
 import java.awt.*;
 
-public class SwtichCard extends ColoredCard implements PoweredCard {
-    public SwtichCard(Color color) {
+public class SwitchCard extends ColoredCard implements PoweredCard {
+    public SwitchCard(Color color) {
         super(color);
     }
 
     @Override
-    public void performAction(fr.ynov.java.uno.Game game){
+    public void performAction(Game game){
         game.reverseDirection();
     }
 
     @Override
     public boolean canBePlayedOn(Card card) {
-        if (card instanceof SwtichCard) {
+        if (card instanceof SwitchCard) {
             return true;
         }
-        return super.canBePlacedOn(card);
+        return super.canBePlayedOn(card);
     }
 
     @Override

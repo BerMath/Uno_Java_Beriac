@@ -1,6 +1,6 @@
 // PlusCard.java
 package fr.beriac.uno.cards;
-
+import fr.beriac.uno.Game;
 import java.awt.*;
 
 public class PlusCard extends ColoredCard implements PoweredCard {
@@ -15,7 +15,7 @@ public class PlusCard extends ColoredCard implements PoweredCard {
     }
 
     @Override
-    public void performAction(fr.ynov.java.uno.Game game) {
+    public void performAction(Game game) {
         // Next player draws 2 cards
         game.makeNextPlayerDraw(power);
     }
@@ -25,7 +25,7 @@ public class PlusCard extends ColoredCard implements PoweredCard {
         if (card instanceof PlusCard) {
             return true;
         }
-        return super.canBePlacedOn(card);
+        return super.canBePlayedOn(card);
     }
 
     @Override

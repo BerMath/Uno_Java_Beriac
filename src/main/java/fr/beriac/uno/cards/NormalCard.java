@@ -19,11 +19,11 @@ public class NormalCard extends ColoredCard {
         if (card instanceof NormalCard && ((NormalCard) card).getNumber() == this.number) {
             return true;
         }
-        return super.canBePlacedOn(card);
+        return super.canBePlayedOn(card);
     }
 
     @Override
     public String toString() {
-        return getColor() + " " + getNumber();
+        return getColorName() + " " + getNumber();
     }
 }

@@ -18,7 +18,7 @@ public abstract class ColoredCard extends Card {
     }
 
     @Override
-    public boolean canBePlacedOn(Card card) {
+    public boolean canBePlayedOn(Card card) {
         if (card instanceof ColoredCard) {
             return ((ColoredCard) card).getColor().equals(this.color);
         }
